@@ -38,11 +38,26 @@
 --grey-900: hsl(0, 0%, 8%);
 
 }
+body {
+  font-size: 0.875rem; /* body text size 14px */
+  background-color: var(--grey-900);
+  color: var(--white);
+}
+
+
+
 
 
 .attribution {
+  position: fixed;
+  background-color: lightblue;
+  bottom: 0;
+  width: 100%;
   font-size: 11px;
   text-align: center;
+}
+.attribution>p {
+  padding: 0.5rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
