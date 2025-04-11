@@ -20,6 +20,25 @@
   font-display: swap;
 }
 
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 16px default/base font-size, 1.5 line-height  */
+  font: normal 400 16px/1.5 Inter, sans-serif;
+
+  /* Color variables */
+--green   : hsl(75, 94%, 57%);
+--white   : hsl(0, 0%, 100%);
+--grey-700: hsl(0, 0%, 20%);
+--grey-800: hsl(0, 0%, 12%);
+--grey-900: hsl(0, 0%, 8%);
+
+}
+
 
 .attribution {
   font-size: 11px;
