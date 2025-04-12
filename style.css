@@ -29,7 +29,7 @@
 --grey-700: #333333;
 --grey-800: #1f1f1f;
 --grey-900: #141414;
-
+--link-blue: #5dd7ff;
 }
 
 *, *::before, *::after {
@@ -37,6 +37,7 @@
   padding: 0;
   box-sizing: border-box;
   font: inherit;
+  line-height: auto;
 }
 
 body {
@@ -52,7 +53,7 @@ main.card {
   flex-flow: column nowrap;
   place-items: stretch center;
   gap: 1.625rem; /* 26px */
-  margin: auto auto auto 0;
+  margin: auto;
   width: 24rem; /* 16px * 24rem = 384px */
   background-color: var(--grey-800);
   padding: 2.5625rem 2.5rem; /* 41px 40px */
@@ -61,7 +62,7 @@ main.card {
 .user-info {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.625rem; /* 26px */
+  gap: 1.5rem; /* 24px */
   align-items: center;
   text-align: center;
 }
@@ -80,7 +81,7 @@ main.card {
   font-size: 1.5rem; /* 24px */
 }
 .profile-location {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--green);
 }
 .profile-bio {
@@ -127,28 +128,30 @@ main.card {
   background-color: transparent;
   bottom: 0;
   width: 100%;
-  font-size: 0.6875rem;
+  font-size: 0.75rem; /* 12px */
   text-align: center;
 }
 .attribution>p {
-  padding: 0.5rem;
+  padding: 0.5rem; /* 8px */
 }
 .attribution a {
   transition: all 0.3s;
   text-decoration: none;
-  color: hsl(160, 100%, 77%);
+  color: var(--link-blue);
 }
 .attribution a:focus,
 .attribution a:hover {
+  outline: none;
   transition: all 0.3s;
   color: var(--green);
   text-decoration:underline;
 }
-/* @media screen and (max-width: 700px){
+@media screen and (max-width: 600px){
   main.card {
-    padding: 1rem;
-    width: 222px;
+    padding: 1.5rem; /* 24px */
+    width: 20.5rem; /* 328px width for mobile */
   }
-  .profile-bio {
+  .profile-header {
+    margin-bottom: 0.25rem; /* 4px */
   }
-} */
+}
