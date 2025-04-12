@@ -24,12 +24,13 @@
   font: normal 400 16px Inter, serif;
 
   /* Color variables */
---green   : #c5f82a;
---white   : #ffffff;
---grey-700: #333333;
---grey-800: #1f1f1f;
---grey-900: #141414;
---link-blue: #5dd7ff;
+--green      : #c5f82a;
+--dark-green : #79dd00;
+--white      : #ffffff;
+--grey-700   : #333333;
+--grey-800   : #1f1f1f;
+--grey-900   : #141414;
+--link-blue  : #5dd7ff;
 }
 
 *, *::before, *::after {
@@ -45,7 +46,8 @@ body {
   place-items: center;
   background-color: var(--grey-900);
   color: var(--white);
-  min-height: 600px;
+  min-height: 680px;
+  height: 100vh;
   font-size: 0.875rem; /* 14px */
 }
 main.card {
@@ -119,9 +121,8 @@ main.card {
   cursor: pointer;
   outline: none;
 }
-.link>a:active {
-  transition: all 0.3s;
-  cursor:grab;
+.link>a:active{
+  background-color: var(--dark-green);
 }
 .attribution {
   position: fixed;
@@ -146,6 +147,9 @@ main.card {
   color: var(--green);
   text-decoration:underline;
 }
+.attribution a:active {
+  color: var(--dark-green);
+}
 @media screen and (max-width: 600px){
   main.card {
     padding: 1.5rem; /* 24px */
@@ -153,5 +157,8 @@ main.card {
   }
   .profile-header {
     margin-bottom: 0.25rem; /* 4px */
+  }
+  .attribution {
+    font-size: 0.6875rem; /* 11px */
   }
 }
