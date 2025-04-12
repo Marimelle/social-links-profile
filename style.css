@@ -20,6 +20,7 @@
   font-display: swap;
 }
 :root {
+  /* base font size 16 */
   font: normal 400 16px/1.5 Inter, serif;
 
   /* Color variables */
@@ -35,6 +36,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font: inherit;
 }
 
 body {
@@ -43,20 +45,26 @@ body {
   background-color: var(--grey-900);
   color: var(--white);
   min-height: 600px;
+  font-size: 0.875rem; /* 14px */
 }
 main.card {
   margin: auto;
-  width: 261px;
+  width: 24rem; /* 16px * 24rem = 384px */
   background-color: var(--grey-800);
-  padding: 1.75rem;
-  border-radius: 0.625rem;
+  padding: 2.5rem; /* 40px */
+  border-radius: 0.625rem; /* 10px */
 }
 .user-info {
   display: flex;
   flex-flow: column nowrap;
-  gap: 0;
+  gap: 1.625rem; /* 26px */
   align-items: center;
   text-align: center;
+}
+.profile-header {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5625rem; /* 9px space bet h1 & location */
 }
 .profile-pic>img{
   border-radius: 50%;
@@ -65,16 +73,13 @@ main.card {
 }
 .profile-name {
   font-weight: 600;
-  font-size: 1rem;
-  margin: 0.585rem 0 0.185rem;
+  font-size: 1.5rem; /* 24px */
 }
 .profile-location {
-  font-size: 0.625rem;
   font-weight: 600;
   color: var(--green);
 }
 .profile-bio {
-  font-size: 0.625rem;
   margin: 1rem 0 0.95rem;
 }
 .nav-links {
@@ -91,7 +96,6 @@ main.card {
   text-decoration: none;
   font-weight: 700;
   color: var(--white);
-  font-size: 0.6rem;
   border-radius: 0.4rem;
   background-color: var(--grey-700);
   transition: all 0.3s;
@@ -109,7 +113,7 @@ main.card {
 }
 .link>a:active {
   transition: all 0.3s;
-  background-color:  hsl(160, 100%, 77%);
+  cursor:grab;
 }
 .attribution {
   position: fixed;
@@ -139,6 +143,5 @@ main.card {
     width: 222px;
   }
   .profile-bio {
-    font-size: 0.6rem;
   }
 }
