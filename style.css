@@ -23,11 +23,11 @@
   font: normal 400 16px/1.5 Inter, serif;
 
   /* Color variables */
---green   : hsl(75, 94%, 57%);
---white   : hsl(0, 0%, 100%);
---grey-700: hsl(0, 0%, 20%);
---grey-800: hsl(0, 0%, 12%);
---grey-900: hsl(0, 0%, 8%);
+--green   : #c5f82a;
+--white   : #ffffff;
+--grey-700: #333333;
+--grey-800: #1f1f1f;
+--grey-900: #141414;
 
 }
 
