@@ -21,7 +21,7 @@
 }
 :root {
   /* base font size 16 */
-  font: normal 400 16px/1.5 Inter, serif;
+  font: normal 400 16px Inter, serif;
 
   /* Color variables */
 --green   : #c5f82a;
@@ -48,10 +48,14 @@ body {
   font-size: 0.875rem; /* 14px */
 }
 main.card {
-  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  place-items: stretch center;
+  gap: 1.625rem; /* 26px */
+  margin: auto auto auto 0;
   width: 24rem; /* 16px * 24rem = 384px */
   background-color: var(--grey-800);
-  padding: 2.5rem; /* 40px */
+  padding: 2.5625rem 2.5rem; /* 41px 40px */
   border-radius: 0.625rem; /* 10px */
 }
 .user-info {
@@ -68,7 +72,7 @@ main.card {
 }
 .profile-pic>img{
   border-radius: 50%;
-  width: 60px;
+  width: 5.5rem; /* 88px */
   aspect-ratio: 1;
 }
 .profile-name {
@@ -80,21 +84,24 @@ main.card {
   color: var(--green);
 }
 .profile-bio {
-  margin: 1rem 0 0.95rem;
+  font-weight: 400;
 }
+
 .nav-links {
   display: flex;
   flex-flow: column nowrap;
+  width: 100%;
   list-style: none;
-  gap: 0.625rem;
+  gap: 1rem;
 }
 
 .link>a {
   display: inline-block;
-  padding: 0.525rem;
+  padding:  0.75rem; /* 12px */
   width: 100%;
   text-decoration: none;
   font-weight: 700;
+  line-height: 150%;
   color: var(--white);
   border-radius: 0.4rem;
   background-color: var(--grey-700);
@@ -137,11 +144,11 @@ main.card {
   color: var(--green);
   text-decoration:underline;
 }
-@media screen and (max-width: 700px){
+/* @media screen and (max-width: 700px){
   main.card {
     padding: 1rem;
     width: 222px;
   }
   .profile-bio {
   }
-}
+} */
